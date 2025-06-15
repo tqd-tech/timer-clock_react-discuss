@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .heading {
@@ -27,7 +27,7 @@ body {
   font-weight: bold;
   margin-bottom: 20px;
   color: #c8cbd0;
-  overflow: hidden;
+  /* overflow: hidden; */
   border: 4px solid transparent;
   border-radius: 12px;
   padding: 20px 40px;
@@ -35,7 +35,7 @@ body {
   box-shadow: 0 0 15px rgba(107, 230, 203, 0.5);
 }
 
-#timer::before {
+/* #timer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -51,7 +51,7 @@ body {
   transform: skewX(-20deg);
   pointer-events: none;
   opacity: 0;
-}
+} */
 
 #timer.running::before {
   animation: shine 2s infinite;
@@ -83,6 +83,33 @@ body {
       #ffff00
     );
   }
+  25% {
+    border-image-source: linear-gradient(
+      315deg,
+      #00ffff,
+      #ff00ff,
+      #00ff00,
+      #ffff00
+    );
+  }
+  50% {
+    border-image-source: linear-gradient(
+      225deg,
+      #00ffff,
+      #ff00ff,
+      #00ff00,
+      #ffff00
+    );
+  }
+  75% {
+    border-image-source: linear-gradient(
+      45deg,
+      #00ffff,
+      #ff00ff,
+      #00ff00,
+      #ffff00
+    );
+  }
   100% {
     border-image-source: linear-gradient(
       495deg,
@@ -108,4 +135,48 @@ body {
 
 .btn button:hover {
   background-color: #47bddd;
+}
+
+.laps {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.lap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lap li {
+  list-style: none;
+}
+
+.export-btn {
+  font-size: 24px;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d900ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.delete-btn {
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }

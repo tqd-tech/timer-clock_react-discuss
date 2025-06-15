@@ -3,7 +3,7 @@ import Stopwatch from './Stopwatch';
 function App() {
   return (
     <div className="container">
-      <h1 className="heading">STOP WATCH</h1>
+      <h1 className="heading">TIMER</h1>
       <Stopwatch />
     </div>
   );
